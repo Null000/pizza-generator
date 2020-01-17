@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pizza Generator</title>
+    <style>
+        .center {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+            text-align: center;
+        }
+        #code {
+            font-size: 100px;
+        }
+    </style>
+</head>
+<body>
+<div class="center">
+    <span id="code"></span><br>
+    <a href="https://www.cheapies.nz/deals/pizzahut.co.nz">What is this about?</a>
+</div>
+<script>
+    let code = Math.floor(Math.random() * 33334) * 3 + "";
+    while (code.length < 5) {
+        code = "0" + code;
+    }
+    document.querySelector("#code").innerHTML = code;
+</script>
+</body>
+</html>
